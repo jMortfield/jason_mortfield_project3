@@ -1,3 +1,40 @@
-body {
-    background: red;
+@import "./partials/setup";
+// potential h1 font: Bungee Shade
+// potential content font: sniglet
+
+.wrapper {
+    max-width: 1080px;
+    margin: 0 auto;
+   .title {
+        font-family: 'Londrina Outline', cursive;
+        word-spacing: 5px;
+        font-size: 10rem;
+        text-align: center;
+   } 
+   .quiz {
+       border: 2px red solid;
+       max-width: 900px;
+       margin: 0 auto;
+       text-align: center;
+       padding: 0 30px;
+       &__header {
+           font-size: 5rem;
+       }
+       &__content {
+           font-size: 3rem;
+       }
+       &__disclaimer {
+           font-size: 1.6rem;
+       }
+       &__choices {
+           display: none;
+       }
+       &__submit--label {
+display: none;       }
+       &__reset {
+           display:none;
+       }
+   }
+
 }
+
