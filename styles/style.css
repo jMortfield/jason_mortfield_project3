@@ -151,20 +151,35 @@ html {
 body {
   font-size: 1.6rem; }
 
+@font-face {
+  font-family: "Funny and Cute";
+  src: url("/assets/darrell-flood_funny-and-cute/Funny & Cute.otf"); }
+
+body {
+  background-image: url(/assets/carrots-food-fresh-616404.jpg);
+  background-size: cover; }
+
 .wrapper {
   max-width: 1080px;
   margin: 0 auto; }
   .wrapper .title {
-    font-family: 'Londrina Outline', cursive;
+    font-family: 'Funny and Cute', cursive;
     word-spacing: 5px;
     font-size: 10rem;
-    text-align: center; }
+    text-align: center;
+    color: #0fa3b1;
+    text-shadow: 2px 2px 4px black; }
   .wrapper .quiz {
-    border: 2px red solid;
     max-width: 900px;
     margin: 0 auto;
     text-align: center;
-    padding: 0 30px; }
+    padding: 30px;
+    background: -webkit-gradient(linear, left top, right bottom, from(#eddea4), to(#f7a072));
+    background: -webkit-linear-gradient(top left, #eddea4, #f7a072);
+    background: -o-linear-gradient(top left, #eddea4, #f7a072);
+    background: linear-gradient(to bottom right, #eddea4, #f7a072);
+    -webkit-box-shadow: 3px 3px 4px black;
+    box-shadow: 3px 3px 4px black; }
     .wrapper .quiz__header {
       font-size: 5rem; }
     .wrapper .quiz__content {
@@ -173,7 +188,17 @@ body {
       font-size: 1.6rem; }
     .wrapper .quiz__choices {
       display: none; }
-    .wrapper .quiz__submit--label {
-      display: none; }
     .wrapper .quiz__reset {
       display: none; }
+    .wrapper .quiz__asterisk {
+      font-size: 2rem;
+      line-height: 2px; }
+  .wrapper .button {
+    padding: 10px 30px;
+    background: #f9f7f3;
+    border: none;
+    -webkit-box-shadow: 1px 1px 2px black;
+    box-shadow: 1px 1px 2px black; }
+    .wrapper .button:active {
+      -webkit-box-shadow: inset 1px 1px 2px black;
+      box-shadow: inset 1px 1px 2px black; }

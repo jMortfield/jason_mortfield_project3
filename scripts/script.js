@@ -2,11 +2,29 @@ $(function(){
 
     // Create array of results
 
-    const results = ["Result 1", "Result 2", "Result 3", "Result 4", "Result 5", "Result 6", "Result 7"];
+    const results = [
+        "*Sigh* There's always one of you, isn't there? I bet you want me to tell you not to eat it, don't you? I bet you're thinking \" Surely nobody is irreponsible enough to tell me to eat this random, non-food, inanimate object, right!?\" Well, y'know what? You do you. Go eat it. C'mon, do it! I can wait... ", 
+        "I'm no doctor, but generally speaking, when the side effects of doing something include certain death, its likely detrimental to your health. Perhaps you should put down that food and go read a book or something", 
+        "Well then, this decision is completely out of my hands. You made a stupid bet, and now you must suffer the stupid consequences. Enjoy spending the night by the toilet!", 
+        "Well then go for it! How can you say no to the deliciousness that its before you!? Don't let your dreams be dream! No pain, no gain! Whatever doesn't kill you makes you stronger! Etc etc.", 
+        "Alright, I'm a a loss here. What is so appealing about this food that you would consider putting yourself through this torture? I mean... sorry. I'm being judgmental. Do what you gotta do. You eat that food, and perhaps while you're stuck by the side of the toilet, you'll have some time to reconsider some of youre life decisions.", 
+        "What am I, the food police? If you really want to steal someone else's food, I highly doubt some faceless webite is going to stop you. Besides, what if you were in the middle of a zombie apocalypse and needed that food to survive. Surely you wouldn't be having a moral dilemma in that situation, so why have one now? Go eat that food!", 
+        "Well then what on earth are you doing on this website, answering ridiculous questions, when you can be feasting on that delicious... food item! YOU GO EAT THAT FOOD ITEM! EAT IT AND ENJOY IT!"
+    ];
 
     // Create array of questions
 
-    const questions = ["Question 1", "Question 2", "Question 3", "Question 4", "Question 5", "Question 6", "Question 7", "Question 8", "Question 9"];
+    const questions = [
+        "Is your object classified as food?", 
+        "Great! Off to a good start. Now, are you allergic to this food?", 
+        "Like... deathly allergic? Will eating this actually kill you?", 
+        "Did you lose some sort of stupid bet, and now you're being made to eat this food?", 
+        "Is this food just so delicious, that it's fully worth all the unpleasant symptoms that are sure to follow?", 
+        "Excellent! We're on a roll! Now look carefully... is there an expiry date label somewhere for your food product? And if yes, is it expired?", 
+        "Alright. Now, are there any obvious signs of mold* or signs that it's gone bad?", 
+        "Hmmmmm. Well, using your own judgment*, has it been expired long enough that it's likely to make you sick if you eat it?", 
+        "Final question: Does the food even belong to you?"
+    ];
 
     // Empty array for answers - will determine which result the user gets
 

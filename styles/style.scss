@@ -2,21 +2,36 @@
 // potential h1 font: Bungee Shade
 // potential content font: sniglet
 
+@font-face {
+  font-family: "Funny and Cute";
+  src: url('/assets/darrell-flood_funny-and-cute/Funny\ &\ Cute.otf');
+}
+
+body {
+    background-image: url(/assets/carrots-food-fresh-616404.jpg);
+    // Photo by Lukas from Pexels: https://www.pexels.com/photo/carrots-food-fresh-freshness-616404/
+    background-size: cover;
+}
+
 .wrapper {
     max-width: 1080px;
     margin: 0 auto;
    .title {
-        font-family: 'Londrina Outline', cursive;
+        font-family: 'Funny and Cute', cursive;
         word-spacing: 5px;
         font-size: 10rem;
         text-align: center;
+        color: #0fa3b1;
+        text-shadow: 2px 2px 4px black;
    } 
    .quiz {
-       border: 2px red solid;
+    //    border: 2px red solid;
        max-width: 900px;
        margin: 0 auto;
        text-align: center;
-       padding: 0 30px;
+       padding: 30px;
+       background: linear-gradient(to bottom right, #eddea4, #f7a072 );
+       box-shadow: 3px 3px 4px black;
        &__header {
            font-size: 5rem;
        }
@@ -29,12 +44,22 @@
        &__choices {
            display: none;
        }
-       &__submit--label {
-display: none;       }
        &__reset {
            display:none;
        }
+       &__asterisk {
+           font-size: 2rem;
+           line-height: 2px;
+       }
    }
-
+   .button {
+       padding: 10px 30px;
+       background: #f9f7f3;
+       border: none;
+       box-shadow: 1px 1px 2px black;
+       &:active {
+           box-shadow: inset 1px 1px 2px black;
+       }
+   }
 }
 
