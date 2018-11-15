@@ -157,13 +157,15 @@ body {
 
 body {
   background-image: url(/assets/carrots-food-fresh-616404.jpg);
-  background-size: cover; }
+  background-size: cover;
+  height: 90vh; }
 
 .wrapper {
   max-width: 1080px;
   margin: 0 auto; }
+  .wrapper .title, .wrapper .quiz__header {
+    font-family: 'Funny and Cute', cursive; }
   .wrapper .title {
-    font-family: 'Funny and Cute', cursive;
     word-spacing: 5px;
     font-size: 10rem;
     text-align: center;
@@ -183,11 +185,15 @@ body {
     .wrapper .quiz__header {
       font-size: 5rem; }
     .wrapper .quiz__content {
-      font-size: 3rem; }
+      font-size: 3rem;
+      font-family: 'Cabin', sans-serif; }
     .wrapper .quiz__disclaimer {
-      font-size: 1.6rem; }
+      font-size: 1.6rem;
+      display: block;
+      margin-top: 10px; }
     .wrapper .quiz__choices {
-      display: none; }
+      display: none;
+      border: none; }
     .wrapper .quiz__reset {
       display: none; }
     .wrapper .quiz__asterisk {
@@ -202,3 +208,11 @@ body {
     .wrapper .button:active {
       -webkit-box-shadow: inset 1px 1px 2px black;
       box-shadow: inset 1px 1px 2px black; }
+
+.footer {
+  width: 100%;
+  text-align: center;
+  margin-top: 40px; }
+  .footer__link {
+    text-decoration: none;
+    color: black; }
