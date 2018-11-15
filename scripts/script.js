@@ -13,7 +13,16 @@ $(function(){
     let answers = [];
 
     // Counter for question #
+
     let questionCounter = 0;
+
+    // String for initial header
+
+    const introHeader = "Testing test"
+
+    // String for initial introduction
+
+    const intro = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis at dolore id vel ad excepturi voluptates animi facere. Est obcaecati dignissimos debitis laudantium atque minus veniam dolorem veritatis, tempora quaerat!"
 
     // Function to hide submit button, and how reset button
     function showReset() {
@@ -26,31 +35,31 @@ $(function(){
     function answerConditions() {
         if (answers[0] === "no") {
             showReset();
-            return $(".quiz__content").html(`<p class="quiz__content">${results[0]}</p>`);
+            return $(".quiz__content").html(results[0]);
         }
         if (answers[1] === "yes" && answers[2] === "yes" ) {
             showReset();
-            return $(".quiz__content").html(`<p class="quiz__content">${results[1]}</p>`);
+            return $(".quiz__content").html(results[1]);
         }
         if ((answers[1] === "yes" && answers[3] === "yes") || (answers[1] === "no" && answers[3] === "yes" && answers[4] === "yes")) {
             showReset();
-            return $(".quiz__content").html(`<p class="quiz__content">${results[2]}</p>`);
+            return $(".quiz__content").html(results[2]);
         }
-        if ((answers[1] === "yes" && answers[4] === "yes") || (answers[1] === "no" && answers[3] === "yes" && answer[5] === "yes")) {
+        if ((answers[1] === "yes" && answers[4] === "yes") || (answers[1] === "no" && answers[3] === "yes" && answers[5] === "yes")) {
             showReset();
-            return $(".quiz__content").html(`<p class="quiz__content">${results[3]}</p>`);
+            return $(".quiz__content").html(results[3]);
         }
-        if ((answers[1] === "yes" && answers[4] === "no") || (answers[1] === "no" && answers[3] === "yes" && answer[5] === "no")) {
+        if ((answers[1] === "yes" && answers[4] === "no") || (answers[1] === "no" && answers[3] === "yes" && answers[5] === "no")) {
             showReset();
-            return $(".quiz__content").html(`<p class="quiz__content">${results[4]}</p>`);
+            return $(".quiz__content").html(results[4]);
         }
         if (answers[1] === "no" && answers[3] === "no" && answers[4] === "no") {
             showReset();
-            return $(".quiz__content").html(`<p class="quiz__content">${results[5]}</p>`);
+            return $(".quiz__content").html(results[5]);
         }
         if (answers[1] === "no" && answers[3] === "no" && answers[4] === "yes") {
             showReset();
-            return $(".quiz__content").html(`<p class="quiz__content">${results[6]}</p>`);
+            return $(".quiz__content").html(results[6]);
         }
     }
 
@@ -58,18 +67,31 @@ $(function(){
     // Make conditions for questions, for paths that split off.
 
     function questionConditions() {
+        // brings question 2 to question 6
         if (answers[1] === "no" && questionCounter === 3) {
-            $(".quiz__content").html(`<p class="quiz__content">${questions[questionCounter + 2]}</p>`);
+            $(".quiz__content").html(questions[questionCounter + 2]);
+        // Brings question 7 to question 4, and question 4 to question 5
         } else if (answers[1] === "no" && answers[2] === "no" && questionCounter === 4) {
-            $(".quiz__content").html(`<p class="quiz__content">${questions[questionCounter + 3]}</p>`);  
-        } else if (answers[1] === "no" && answers[2] === "no" && answers[3] === "yes" && questionCounter === 5) {
-            $(".quiz__content").html(`<p class="quiz__content">${questions[questionCounter - 2]}</p>`);
+            $(".quiz__content").html(questions[questionCounter + 2]);
+        } else if (answers[1] === "no" && answers[2] === "no" && answers[3] === "yes" && (questionCounter === 5 || questionCounter === 6)) {
+            $(".quiz__content").html(questions[questionCounter - 2]);
+        // Bring question 7 to question 9
         } else if (answers[1] === "no" && answers[2] === "no" && answers[3] === "no" && questionCounter === 5) {
-            $(".quiz__content").html(`<p class="quiz__content">${questions[questionCounter + 2]}</p>`);
-        } else {
-            $(".quiz__content").html(`<p class="quiz__content">${questions[questionCounter - 1]}</p>`);
-        }
+            $(".quiz__content").html(questions[questionCounter + 2]);
+        // Brings question 6 to 8, and question 8 to 9
+        } else if (answers[1] === "no" && answers[2] === "yes" && (questionCounter === 4 || questionCounter === 5)) {
+            $(".quiz__content").html(questions[questionCounter + 3]);
+        } else if (answers[1] === "no" && answers[2] === "yes" && answers[3] === "yes" && (questionCounter === 5 || questionCounter === 6)) {
+            $(".quiz__content").html(questions[questionCounter - 2]);
+        }  else {
+            $(".quiz__content").html(questions[questionCounter - 1])
+        };
     }
+
+
+    // else if (answers[1] === "no" && answers[2] === "yes" && answers[3] === "no" && questionCounter === 5) {
+    //     $(".quiz__content").html(questions[questionCounter + 4]);
+    // }
 
     // Function to run for each "form submit"
 
@@ -103,8 +125,17 @@ $(function(){
 
     });
 
-
-
+    // Make the Reset Button functional
+    $(".quiz__reset").on("click", function(event){
+        event.preventDefault();
+        questionCounter = 0;
+        $(".quiz__reset").hide();
+        $(".quiz__button").show();
+        $(".quiz__header").html(introHeader);
+        $(".quiz__content").html(intro);
+        $(".quiz__choices").hide();
+        answers = [];
+    });
 
 });
 
