@@ -3,7 +3,7 @@ $(function(){
     // Create array of results
 
     const results = [
-        "*Sigh* There's always one of you, isn't there? I bet you want me to tell you not to eat it, don't you? I bet you're thinking \" Surely nobody is irreponsible enough to tell me to eat this random, non-food, inanimate object, right!?\" Well, y'know what? You do you. Go eat it. C'mon, do it! I can wait... ", 
+        "*Sigh* There's always one of you, isn't there? I bet you want me to tell you not to eat it, don't you? I bet you're thinking \" Surely nobody is irreponsible enough to tell me to eat this random, non-food object, right!?\" Well, y'know what? You're wrong. You do you. Go eat it. C'mon, do it! I can wait... ", 
 
         "I'm no doctor, but generally speaking, when the side effects of doing something include certain death, its likely detrimental to your health. Perhaps you should put down that food and go read a book or something", 
 
@@ -54,7 +54,7 @@ $(function(){
 
     // String for initial introduction
 
-    const intro = "It's the age old dilemma. You're hungry, and the nearest McDonalds is somewhere that's not in your living room. You look around the room for something nearby. You finally find something in your fridge... or elsewhere, and you stand there asking yourself \"Can I eat this ?\""
+    const intro = "It's the age old dilemma. You're hungry, and the nearest McDonalds is somewhere that's not in your living room. You look around the room for something nearby. You finally find something in your fridge... or elsewhere. You stand there looking at the object and ask yourself \"Can I eat this ?\""
 
     // Function to hide submit button, and how reset button
     function showReset() {
@@ -186,6 +186,66 @@ $(function(){
         $(".quiz__choices").hide();
         answers = [];
     });
+
+    // KONAMI CODE KONAMI CODE KONAMI CODE KONAMI CODE
+    // This is not my own code. Code copied from: https://stackoverflow.com/questions/31626852/how-to-add-konami-code-in-a-website-based-on-html
+
+
+    // a key map of allowed keys
+    var allowedKeys = {
+        37: 'left',
+        38: 'up',
+        39: 'right',
+        40: 'down',
+        65: 'a',
+        66: 'b'
+    };
+
+    // the 'official' Konami Code sequence
+    var konamiCode = ['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right', 'b', 'a'];
+
+    // a variable to remember the 'position' the user has reached so far.
+    var konamiCodePosition = 0;
+
+    // add keydown event listener
+    document.addEventListener('keydown', function (e) {
+        // get the value of the key code from the key map
+        var key = allowedKeys[e.keyCode];
+        // get the value of the required key from the konami code
+        var requiredKey = konamiCode[konamiCodePosition];
+
+        // compare the key with the required key
+        if (key == requiredKey) {
+
+            // move to the next key in the konami code sequence
+            konamiCodePosition++;
+
+            // if the last key is reached, activate cheats
+            if (konamiCodePosition == konamiCode.length) {
+                activateCheats();
+                konamiCodePosition = 0;
+            }
+        } else {
+            konamiCodePosition = 0;
+        }
+    });
+
+    function activateCheats() {
+        $("body").css("background-image", "url(/assets/doggo-eat-this.png)");
+        // $("body").css("background-size", "auto");
+        // $("body").css("background-repeat", "no-repeat");
+        $('.main').css("display", "none");
+        $('.footer').css("display", "none");
+        setTimeout(returnToNormal, 5000);
+    }
+
+    function returnToNormal() {
+        $("body").css("background-image", "url(/assets/carrots-food-fresh-616404.jpg)");
+        // $("body").css("background-size", "cover");
+        // $("body").css("background-repeat", "repeat");
+        $(".main").css("display", "initial");
+        $('.footer').css("display", "initial");
+    }
 
 });
 
