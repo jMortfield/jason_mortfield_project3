@@ -1,21 +1,18 @@
 @import "./partials/setup";
-// potential h1 font: Bungee Shade
-// potential content font: sniglet
 
 @font-face {
   font-family: "Funny and Cute";
-  src: url('/assets/darrell-flood_funny-and-cute/Funny\ &\ Cute.otf');
+  src: url('assets/darrell-flood_funny-and-cute/Funny\ &\ Cute.otf');
 }
 
 body {
-    background-image: url(/assets/carrots-food-fresh-616404.jpg);
+    background-image: url(assets/carrots-food-fresh-616404.jpg);
     // Photo by Lukas from Pexels: https://www.pexels.com/photo/carrots-food-fresh-freshness-616404/
     background-size: cover;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    // background-repeat: no-repeat;
 }
 
 .wrapper {
@@ -35,7 +32,6 @@ body {
 }
 
 .quiz {
-//    border: 2px red solid;
     max-width: 900px;
     margin: 0 auto;
     text-align: center;
@@ -114,16 +110,8 @@ body {
 }
 
 .footer {
-    // border: 2px red solid;
-    // position: absolute;
-    // bottom: 0;
-    // position: fixed;
-    // bottom: 10px;
     width: 100%;
     text-align: center;
-    // background: black;
-    // color: white;
-    // margin-top: 40px;;
     &__link {
         text-decoration: none;
         color: black;
