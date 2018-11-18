@@ -180,54 +180,84 @@ body {
     font-size: 10rem;
     text-align: center;
     color: #0fa3b1;
-    text-shadow: 2px 2px 4px black; }
-  .wrapper .quiz {
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 30px;
-    background: -webkit-gradient(linear, left top, right bottom, from(#eddea4), to(#f7a072));
-    background: -webkit-linear-gradient(top left, #eddea4, #f7a072);
-    background: -o-linear-gradient(top left, #eddea4, #f7a072);
-    background: linear-gradient(to bottom right, #eddea4, #f7a072);
-    -webkit-box-shadow: 3px 3px 4px black;
-    box-shadow: 3px 3px 4px black; }
-    .wrapper .quiz__header {
-      font-size: 5rem; }
-    .wrapper .quiz__content {
-      font-size: 3rem;
-      font-family: 'Cabin', sans-serif; }
-    .wrapper .quiz__disclaimer {
-      font-size: 1.6rem;
-      display: block;
-      margin-top: 10px; }
-    .wrapper .quiz__form {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center; }
-    .wrapper .quiz__choices {
-      border: none; }
-    .wrapper .quiz__reset {
-      display: none; }
-    .wrapper .quiz__asterisk {
-      font-size: 2rem;
-      line-height: 2px; }
-  .wrapper .button {
-    padding: 10px 30px;
-    background: #f9f7f3;
-    border: none;
-    -webkit-box-shadow: 1px 1px 2px black;
-    box-shadow: 1px 1px 2px black; }
-    .wrapper .button:active {
-      -webkit-box-shadow: inset 1px 1px 2px black;
-      box-shadow: inset 1px 1px 2px black; }
+    text-shadow: 2px 2px 4px black;
+    margin: 40px 0; }
+
+.quiz {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 30px;
+  background: -webkit-gradient(linear, left top, right bottom, from(#eddea4), to(#f7a072));
+  background: -webkit-linear-gradient(top left, #eddea4, #f7a072);
+  background: -o-linear-gradient(top left, #eddea4, #f7a072);
+  background: linear-gradient(to bottom right, #eddea4, #f7a072);
+  -webkit-box-shadow: 3px 3px 4px black;
+  box-shadow: 3px 3px 4px black; }
+  .quiz__header {
+    font-size: 5rem; }
+  .quiz__content {
+    font-size: 3rem;
+    font-family: 'Cabin', sans-serif;
+    margin-bottom: 50px; }
+  .quiz__disclaimer {
+    font-size: 1.6rem;
+    display: block;
+    margin-top: 10px; }
+  .quiz__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .quiz__choices {
+    display: none;
+    padding-bottom: 5px;
+    border: none; }
+  .quiz__label {
+    position: relative;
+    cursor: pointer; }
+    .quiz__label:first-of-type {
+      margin-right: 35px; }
+    .quiz__label::before {
+      content: "";
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: #0fa3b1;
+      -webkit-box-shadow: 2px 2px 4px black;
+      box-shadow: 2px 2px 4px black;
+      position: absolute;
+      top: -35px;
+      left: -5px; }
+  .quiz__input {
+    opacity: 0;
+    position: absolute; }
+    .quiz__input:checked + .quiz__label::before {
+      background: #15cedf;
+      -webkit-box-shadow: inset 2px 3px 4px black;
+      box-shadow: inset 2px 3px 4px black; }
+  .quiz__reset {
+    display: none; }
+  .quiz__asterisk {
+    font-size: 2rem;
+    line-height: 2px; }
+
+.button {
+  padding: 10px 30px;
+  background: #f9f7f3;
+  border: none;
+  -webkit-box-shadow: 1px 1px 2px black;
+  box-shadow: 1px 1px 2px black; }
+  .button:active {
+    -webkit-box-shadow: inset 1px 1px 2px black;
+    box-shadow: inset 1px 1px 2px black; }
 
 .footer {
   width: 100%;
@@ -241,7 +271,7 @@ body {
     width: 95%; }
     .wrapper .title {
       font-size: 9rem; }
-    .wrapper .quiz__header {
-      font-size: 4.6rem; }
-    .wrapper .quiz__content {
-      font-size: 2.8rem; } }
+  .quiz__header {
+    font-size: 4.6rem; }
+  .quiz__content {
+    font-size: 2.8rem; } }

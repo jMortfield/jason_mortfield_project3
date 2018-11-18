@@ -9,11 +9,11 @@ $(function(){
 
         "Well then, this decision is completely out of my hands. You made a stupid bet, and now you must suffer the stupid consequences. Enjoy spending the night by the toilet!", 
 
-        "Well then go for it! How can you say no to the deliciousness that its before you!? Don't let your dreams be dream! No pain, no gain! Whatever doesn't kill you makes you stronger! Etc etc.", 
+        "Well then go for it! How can you say no to the deliciousness that sits before you!? Don't let your dreams be dream! No pain, no gain! Whatever doesn't kill you makes you stronger! Etc etc.", 
 
-        "Alright, I'm a a loss here. What is so appealing about this food that you would consider putting yourself through this torture? I mean... sorry. I'm being judgmental. Do what you gotta do. You eat that food, and perhaps while you're stuck by the side of the toilet, you'll have some time to reconsider some of youre life decisions.", 
+        "Alright, I'm a a loss here. What is so appealing about this food that you would consider putting yourself through this torture? I mean... sorry. I'm being judgmental. Do what you gotta do. You eat that food, and perhaps while you're stuck by the side of the toilet, you'll have some time to reconsider some of your life decisions.", 
 
-        "What am I, the food police? If you really want to steal someone else's food, I highly doubt some faceless webite is going to stop you. Besides, what if you were in the middle of a zombie apocalypse and needed that food to survive. Surely you wouldn't be having a moral dilemma in that situation, so why have one now? Go eat that food!", 
+        "What am I, the food police? If you really want to steal someone else's food, I highly doubt some faceless website is going to stop you. Do what you gotta do. Go eat that food!", 
 
         "Well then what on earth are you doing on this website, answering ridiculous questions, when you can be feasting on that delicious... food item! YOU GO EAT THAT FOOD ITEM! EAT IT AND ENJOY IT!"
     ];
@@ -37,7 +37,7 @@ $(function(){
 
         "Final question: Does this food belong to you?",
 
-        "Hmmmmm. Well, using your own judgment*, has it been expired long enough that it's likely to make you sick if you eat it? <span class=\"quiz__disclaimer\">*Some people's judgments are not to be trusted. If you happen to be one of those people, please conult someone with better judgment... or Google</span>" 
+        "Hmmmmm. Well, using your own judgment*, has it been expired long enough that it's likely to make you sick if you eat it? <span class=\"quiz__disclaimer\">*Some people's judgments are not to be trusted. If you happen to be one of those people, please consult someone with better judgment... or Google</span>" 
     ];
 
     // Empty array for answers - will determine which result the user gets
@@ -232,8 +232,6 @@ $(function(){
 
     function activateCheats() {
         $("body").css("background-image", "url(/assets/doggo-eat-this.png)");
-        // $("body").css("background-size", "auto");
-        // $("body").css("background-repeat", "no-repeat");
         $('.main').css("display", "none");
         $('.footer').css("display", "none");
         setTimeout(returnToNormal, 5000);
@@ -241,8 +239,6 @@ $(function(){
 
     function returnToNormal() {
         $("body").css("background-image", "url(/assets/carrots-food-fresh-616404.jpg)");
-        // $("body").css("background-size", "cover");
-        // $("body").css("background-repeat", "repeat");
         $(".main").css("display", "initial");
         $('.footer').css("display", "initial");
     }
