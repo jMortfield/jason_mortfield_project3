@@ -153,10 +153,10 @@ body {
 
 @font-face {
   font-family: "Funny and Cute";
-  src: url("/assets/darrell-flood_funny-and-cute/Funny & Cute.otf"); }
+  src: url("assets/darrell-flood_funny-and-cute/Funny & Cute.otf"); }
 
 body {
-  background-image: url(/assets/carrots-food-fresh-616404.jpg);
+  background-image: url(assets/carrots-food-fresh-616404.jpg);
   background-size: cover;
   height: 100vh;
   display: -webkit-box;
